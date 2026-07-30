@@ -141,3 +141,34 @@ first_line
 # print(first_line)
 # 'weight\tgroup\n'
 # weight  group
+
+
+my_file = open("plantgrowth.txt")
+for x in my_file:
+    pass
+    # print(repr(x))
+
+my_file.close()
+my_file.close()
+
+
+################################################################################
+#!/usr/bin/env python
+import sys
+sys.argv        # gives us any number of command line arguments in a list form i.e. the 
+                # name of the script we are running followed by any and all arguments we type
+# print(sys.argv) 
+# (python_ds_handbook) rajan@Rajan:BIOL7200$ ./1_reading_and_data_exploration.py       
+# ['./1_reading_and_data_exploration.py']
+# (python_ds_handbook) rajan@Rajan:BIOL7200$ ./1_reading_and_data_exploration.py 1   2  type
+# ['./1_reading_and_data_exploration.py', '1', '2', 'type']
+# (python_ds_handbook) rajan@Rajan:BIOL7200$ ./1_reading_and_data_exploration.py 1_reading_and_data_exploration.py plantgrowth.txt 123 ine two three
+# ['./1_reading_and_data_exploration.py', '1_reading_and_data_exploration.py', 'plantgrowth.txt', '123', 'ine', 'two', 'three']
+
+type(sys.argv)
+# print(type(sys.argv))
+# <class 'list'>
+
+
+file = open(sys.argv[0])
+print(file.read())
